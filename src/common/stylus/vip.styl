@@ -1,0 +1,20 @@
+vip($n, $url)
+  position relative
+  &:before
+    display block
+    position absolute
+    right 0
+    bottom 0
+    background-image $url
+    content: ''
+    width $n
+    height $n
+    background-position: left
+    background-repeat: no-repeat
+    background-size auto $n
+    animation: vipAnimation 1.5s steps(23) 1s infinite forwards
+@keyframes vipAnimation
+  0%
+    background-position: left
+  100%
+    background-position: right
